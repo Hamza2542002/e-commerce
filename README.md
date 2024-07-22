@@ -2,4 +2,4 @@
 
 ## Live Demo
 
-[Live Demo](https://e-commerce-frontend-1.herokuapp.com/)
+[Live Demo](https://hamza2542002.github.io/e-commerce/)
