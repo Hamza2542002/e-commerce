@@ -46,6 +46,7 @@ async function getProductsByCategory(category) {
     errorIndicator.textContent = "Some Thing Went Wrong ...";
   }
 }
+
 typeInput.addEventListener("change", async (e) => {
   const products = await getProductsByCategory(e.target.value);
   createCardRow(products);
@@ -92,10 +93,10 @@ getProducts();
 
 async function serachByName(name) {
   try {
-    const res = await fetch(`${API}/search?q=${name}`);
-    const { products } = await res.json();
+    const products = await getProductsByCategory(typeInput.value);
     if (products.length === 0) throw new Error("No Product with this Name");
-    createCardRow(products);
+    const filtered = products.filter((p) => p.title.includes(name));
+    createCardRow(filtered);
   } catch (err) {
     const errorIndicator = document.getElementById("error");
     errorIndicator.classList.remove("hidden");
@@ -137,10 +138,3 @@ function createCardRow(products) {
     productContiner.appendChild(productCard);
   });
 }
-
-document.addEventListener("keydown", (e) => {
-  console.log(e.key);
-  if (e.key === "Backspace") {
-    window.history.back();
-  }
-});
