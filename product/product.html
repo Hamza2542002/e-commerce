@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./productScript.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product</title>
+  </head>
+  <body style="font-family: Roboto, Mono, monospace">
+    <header
+      class="flex items-center justify-between bg-yellow-400 px-7 py-3 uppercase sm:px-7 sm:py-3"
+    >
+      <a href="../index.html">Shopping Center</a>
+      <p class="userName hidden text-sm font-semibold sm:block"></p>
+    </header>
+    <main class="container w-[350px] sm:w-[660px] products mx-auto p-5">
+      <div id="loading" class="text-center text-lg text-gray-600 mb-6">
+        Loading...
+      </div>
+      <div
+        id="error"
+        class="text-center text-lg text-red-600 mb-6 hidden"
+      ></div>
+
+      <div
+        class="mx-auto max-w-lg bg-white rounded-lg shadow-md p-6 hidden"
+        id="productCard"
+      >
+        <a
+          href="../products/products.html"
+          class="text-blue-500 mb-5 inline-block"
+          ><- Back To Products</a
+        >
+        <h1 class="text-2xl font-bold mb-4" id="productTitle"></h1>
+        <img
+          id="productImage"
+          class="w-full object-cover mb-4 rounded-lg"
+          alt="Product Image"
+        />
+        <p class="text-gray-700 mb-2" id="productDescription"></p>
+        <p class="text-gray-500 text-sm mb-2" id="productCategory"></p>
+        <p
+          class="text-xl font-semibold mb-2 text-green-600"
+          id="productPrice"
+        ></p>
+        <p class="text-yellow-500 mb-2" id="productRating"></p>
+        <p class="text-gray-700 mb-2" id="productStock"></p>
+        <p class="text-gray-700 mb-2" id="productBrand"></p>
+        <p class="text-gray-700 mb-2" id="productSKU"></p>
+        <p class="text-gray-700 mb-2" id="productWeight"></p>
+        <p class="text-gray-700 mb-2" id="productDimensions"></p>
+        <p class="text-gray-700 mb-2" id="productWarranty"></p>
+        <p class="text-gray-700 mb-2" id="productShipping"></p>
+        <p class="text-gray-700 mb-2" id="productAvailability"></p>
+        <p class="text-gray-700 mb-2" id="productReturnPolicy"></p>
+        <p class="text-gray-700 mb-2" id="productMOQ"></p>
+        <div id="productReviews" class="space-y-2"></div>
+        <img id="productQRCode" class="w-24 mt-4" alt="QR Code" />
+        <button
+          id="addToCartButton"
+          class="mt-4 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700"
+        >
+          Add to Cart
+        </button>
+        <p id="cartMessage" class="mt-2 text-green-500 hidden">
+          Product added to cart!
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

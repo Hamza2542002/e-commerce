@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./productsScript.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Peoducts</title>
+  </head>
+  <body style="font-family: Roboto, Mono, monospace">
+    <header
+      class="flex items-center justify-between bg-yellow-400 px-7 py-3 uppercase sm:px-7 sm:py-3"
+    >
+      <a href="../index.html">Shopping Center</a>
+      <form id="searchFrom">
+        <input
+          id="searchInput"
+          class="w-28 rounded-full bg-yellow-100 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-500 sm:w-64"
+          type="text"
+          placeholder="search Oreder #"
+        />
+      </form>
+      <p class="userName hidden text-sm font-semibold sm:block"></p>
+    </header>
+    <main>
+      <section
+        class="container w-[350px] sm:w-[660px] md:w-[980px] mx-auto p-5"
+      >
+        <header class="flex justify-between items-center mb-6">
+          <h1 class="text-3xl font-bold">Products</h1>
+          <div class="flex gap-6 items-center">
+            <div class="flex justify-between items-center gap-2">
+              <label for="sort-input">Sort By Price</label>
+              <input type="checkbox" name="sort" id="sort-input" />
+            </div>
+            <select name="" id="product-type" class="border-2 rounded-lg px-2">
+              <option value="all">All</option>
+            </select>
+          </div>
+        </header>
+        <div id="loading" class="text-center text-lg text-gray-600 mb-6">
+          Loading...
+        </div>
+        <div
+          id="error"
+          class="text-center text-lg text-red-600 mb-6 hidden"
+        ></div>
+        <div
+          id="productGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 hidden"
+        ></div>
+      </section>
+    </main>
+  </body>
+</html>

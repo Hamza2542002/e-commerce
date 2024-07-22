@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./cartScript.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cart</title>
+  </head>
+  <body style="font-family: Roboto, Mono, monospace">
+    <header
+      class="flex items-center justify-between bg-yellow-400 px-7 py-3 uppercase sm:px-7 sm:py-3"
+    >
+      <a href="../index.html">Shopping Center</a>
+      <p class="userName hidden text-sm font-semibold sm:block"></p>
+    </header>
+    <main class="container w-[350px] sm:w-[660px] products mx-auto p-5">
+      <div class="flex flex-col items-center">
+        <a
+          href="../products/products.html"
+          class="text-blue-500 mb-5 inline-block self-start"
+          ><- Back To Products</a
+        >
+        <h1 class="text-2xl font-bold mb-6 self-start">Shopping Cart</h1>
+
+        <div
+          id="cartItems"
+          class="w-full max-w-2xl bg-white rounded-lg shadow-md p-6"
+        >
+          <div id="cartEmpty" class="text-gray-600 text-center hidden">
+            Your cart is empty.
+          </div>
+          <div id="cartList"></div>
+          <div
+            id="cartTotal"
+            class="mt-4 text-lg font-semibold text-right hidden"
+          >
+            Total: $0.00
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
